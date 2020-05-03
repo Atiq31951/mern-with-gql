@@ -47,7 +47,6 @@ app.use(
     rootValue: {
       events: () => events,
       createEvent: (args) => {
-        console.log("Args  ===> ", args);
         const event = {
           _id: Math.random().toString(),
           title: args.eventInput.title,
@@ -56,7 +55,6 @@ app.use(
           date: new Date(),
         };
         events.push(event);
-        console.log("args", args, "\nEvent", event, "Events", events);
         return event;
       },
     },
